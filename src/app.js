@@ -12,7 +12,7 @@ app.set('view engine','hbs')
 app.use(express.static(publicDirectoryPath))
 app.get('',(req,res) => {
     res.render('weather',{
-        tittle : 'Main page',
+        tittle : 'My Weather page',
         name : 'Saaketh'
     })
 })
@@ -24,7 +24,7 @@ app.get('/about',(req,res) => {
 })
 app.get('/help',(req,res) => {
     res.render('help',{
-        helpText : 'This is a assisting site',
+        helpText : 'Nothing to help',
         tittle : 'About',
         name : 'Saaketh'
     })
