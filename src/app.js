@@ -6,6 +6,7 @@ const forecast = require('./util/forecast')
 const app = express()
 const publicDirectoryPath = path.join(__dirname,'../public')
 const partials = path.join(__dirname,'../views/partials')
+const port = process.env.PORT || 300
 hbs.registerPartials(partials)
 app.set('view engine','hbs')
 app.use(express.static(publicDirectoryPath))
@@ -80,6 +81,6 @@ app.get('*',(req,res) => {
 } )
 
 
-app.listen(300,() => {
-    console.log('vachina poyi chusko')
+app.listen(port,() => {
+    console.log("It's up on port " + port)
 })
